@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Product Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Backend Mini Project</p>
+          <h1>Product Dashboard</h1>
+        </div>
+        <button id="refreshBtn" class="primary-btn">Refresh</button>
+      </header>
+
+      <section class="summary">
+        <div class="summary-card">
+          <span>Total Products</span>
+          <strong id="totalProducts">0</strong>
+        </div>
+        <div class="summary-card">
+          <span>Total Stock</span>
+          <strong id="totalStock">0</strong>
+        </div>
+        <div class="summary-card">
+          <span>Revenue</span>
+          <strong id="totalRevenue">0</strong>
+        </div>
+      </section>
+
+      <section class="panel form-panel">
+        <h2>Add Product</h2>
+        <form id="productForm">
+          <div class="field-row">
+            <label>
+              Product Name
+              <input type="text" id="name" placeholder="e.g. Keyboard" required />
+            </label>
+            <label>
+              Price
+              <input type="number" id="price" placeholder="2999" min="0" required />
+            </label>
+            <label>
+              Stock
+              <input type="number" id="stock" placeholder="10" min="0" required />
+            </label>
+          </div>
+          <button type="submit" class="primary-btn">Save Product</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="section-header">
+          <h2>Products List</h2>
+        </div>
+        <div id="productList" class="product-grid"></div>
+      </section>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
