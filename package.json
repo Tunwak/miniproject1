@@ -5,7 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start:prod": "pm2 start ecosystem.config.js",
+    "stop:prod": "pm2 stop mini-backend-api",
+    "restart:prod": "pm2 restart mini-backend-api",
+    "logs:prod": "pm2 logs mini-backend-api"
   },
   "keywords": [
     "backend",
@@ -20,6 +24,7 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "pm2": "^7.1.2"
   }
 }
